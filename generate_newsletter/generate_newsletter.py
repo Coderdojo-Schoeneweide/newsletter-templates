@@ -97,9 +97,10 @@ TICKET_LINK_HTML = '<a href="{}" style="text-decoration: underline; color: #eb6b
 
 WORKSHOP_DATA = [
     {
-        'title': 'Coding im Dojo am 28.10.2023',
+        'title': 'Coding im Dojo am 06.01.2024',
         'subtexts': [
-            'Freies Programmieren und ein wenig Inspiration :)'
+            'Schon an diesem Wochenende ist das nächste Coding im Dojo.',
+            'Das heißt freies Programmieren mit ein wenig Unterstützung und Inspiration von uns.',
         ],
         'tickets': {
             'text': 'Tickets wie immer unter {}',
@@ -107,12 +108,12 @@ WORKSHOP_DATA = [
         }
     },
     {
-        'title': 'Workshop am 11.11.2023',
+        'title': 'Coding im Dojo am 20.01.2024',
         'subtexts': [
-            'Was wir genau machen wissen wir noch nicht, aber wird bestimmt cool :D'
+            # 'Wir schauen ein wenig in die Welt der künstlichen Intelligenz. Was kann man heute damit machen und wie baut man eigentlich eine eigene KI?'
         ],
         'tickets': {
-            'text': 'Tickets wie immer unter {}',
+            'text': 'Tickets auch hier unter {}',
             'link': 'https://pretix.eu/dojosw/'
         }
     }
@@ -136,7 +137,7 @@ def main():
     html_workshops = '\n'.join(html_workshops)
 
     today = datetime.today()
-    weekday = '{}, {}.{}.{}'.format(WEEKDAYS[today.weekday()], today.day, today.month, today.year)
+    weekday = '{}, {}'.format(WEEKDAYS[today.weekday()], datetime.now().strftime('%d.%m.%Y'))
 
     # load template
     with open('template_eltern_newsletter.html', 'r') as f:
