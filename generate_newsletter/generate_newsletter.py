@@ -97,10 +97,10 @@ TICKET_LINK_HTML = '<a href="{}" style="text-decoration: underline; color: #eb6b
 
 WORKSHOP_DATA = [
     {
-        'title': 'Coding im Dojo am 06.01.2024',
+        'title': 'Animationsworkshop am 03.02.2024',
         'subtexts': [
-            'Schon an diesem Wochenende ist das nächste Coding im Dojo.',
-            'Das heißt freies Programmieren mit ein wenig Unterstützung und Inspiration von uns.',
+            'Dieses mal schauen wir uns an, wie Figuren in Filmen und Spielen animiert werden!',
+            'Empfohlen ab 11 Jahren.',
         ],
         'tickets': {
             'text': 'Tickets wie immer unter {}',
@@ -108,14 +108,21 @@ WORKSHOP_DATA = [
         }
     },
     {
-        'title': 'Coding im Dojo am 20.01.2024',
+        'title': 'Coding im Dojo am 17.02.2024',
         'subtexts': [
-            # 'Wir schauen ein wenig in die Welt der künstlichen Intelligenz. Was kann man heute damit machen und wie baut man eigentlich eine eigene KI?'
+            'Freies Programmieren mit Scratch oder Python oder C oder mBots oder... Wir helfen euch!'
         ],
         'tickets': {
             'text': 'Tickets auch hier unter {}',
             'link': 'https://pretix.eu/dojosw/'
         }
+    },
+    {
+        'title': 'Sonstiges',
+        'subtexts': [
+            'Wir planen für die zukünftigen Workshops ein kleines Buffet zu organisieren. Bringt gerne etwas kleines zu essen mit :)',
+            'Es gibt eventuell die Möglichkeit in einen größeren Raum umzuziehen. Mal schauen, ob das klappt, wir halten euch auf dem Laufenden!'
+        ]
     }
 ]
 
@@ -128,8 +135,9 @@ def main():
         html_subtext = []
         for subtext in workshop['subtexts']:
             html_subtext.append(SUBTEXT_HTML.format(subtext))
-        ticket_subtext = SUBTEXT_HTML.format(workshop['tickets']['text'].format(TICKET_LINK_HTML.format(workshop['tickets']['link'], workshop['tickets']['link'])))
-        html_subtext.append(ticket_subtext)
+        if 'tickets' in workshop:
+            ticket_subtext = SUBTEXT_HTML.format(workshop['tickets']['text'].format(TICKET_LINK_HTML.format(workshop['tickets']['link'], workshop['tickets']['link'])))
+            html_subtext.append(ticket_subtext)
         html_workshop = WORKSHOP_HTML_BLOCK.format(workshop['title'], '\n'.join(html_subtext))
         html_workshop = '\n'.join([WORKSHOP_HTML_BLOCK_PRE, html_workshop])
         html_workshops.append(html_workshop)
