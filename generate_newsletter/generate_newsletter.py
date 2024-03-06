@@ -97,10 +97,9 @@ TICKET_LINK_HTML = '<a href="{}" style="text-decoration: underline; color: #eb6b
 
 WORKSHOP_DATA = [
     {
-        'title': 'Animationsworkshop am 03.02.2024',
+        'title': 'Coding im Dojo am 16.03.2024',
         'subtexts': [
-            'Dieses mal schauen wir uns an, wie Figuren in Filmen und Spielen animiert werden!',
-            'Empfohlen ab 11 Jahren.',
+            'Eigene Projekte erfinden und spielerisch Programmieren. Wie immer ;)',
         ],
         'tickets': {
             'text': 'Tickets wie immer unter {}',
@@ -108,9 +107,9 @@ WORKSHOP_DATA = [
         }
     },
     {
-        'title': 'Coding im Dojo am 17.02.2024',
+        'title': 'Processing Workshop am 23.03.2024',
         'subtexts': [
-            'Freies Programmieren mit Scratch oder Python oder C oder mBots oder... Wir helfen euch!'
+            'Wir schauen uns das Tool "Processing" an. Dabei programmieren wir mit Text und lernen die Sprache Java kennen.'
         ],
         'tickets': {
             'text': 'Tickets auch hier unter {}',
@@ -120,8 +119,8 @@ WORKSHOP_DATA = [
     {
         'title': 'Sonstiges',
         'subtexts': [
-            'Wir planen für die zukünftigen Workshops ein kleines Buffet zu organisieren. Bringt gerne etwas kleines zu essen mit :)',
-            'Es gibt eventuell die Möglichkeit in einen größeren Raum umzuziehen. Mal schauen, ob das klappt, wir halten euch auf dem Laufenden!'
+            'Es gibt zwei neue Zusatzprodukte.',
+            'Ihr könnt in Pretix auswählen, dass ihr etwas zu Essen für das Buffet mitbringen wollt oder einen Computer reservieren. Den Computer bitte nur reservieren, wenn man keinen eigenen mitbringen kann ;)'
         ]
     }
 ]
