@@ -2,6 +2,38 @@
 import pprint
 from datetime import datetime
 
+
+WORKSHOP_DATA = [
+    {
+        'title': 'Coding in der Feuerwache am 29.06.2024',
+        'subtexts': [
+            'Freies Programmieren :)',
+        ],
+        'tickets': {
+            'text': 'Tickets wie immer unter {}',
+            'link': 'https://pretix.eu/dojosw/'
+        }
+    },
+    {
+        'title': 'Workshop am 13.07.2024',
+        'subtexts': [
+            'Einen LCD-Display selber programmieren. Das schauen wir uns zusammen an :)',
+            'Die Tickets werden übernächste Woche freigeschaltet.'
+        ],
+        'tickets': {
+            'text': 'Tickets dann auch unter {}',
+            'link': 'https://pretix.eu/dojosw/'
+        }
+    },
+    # {
+    #     'title': 'Sonstiges',
+    #     'subtexts': [
+    #         'Diesen Monat gab es nur einen Workshop. Wir hatten einfach zu viel zu tun, aber ab nächstem Monat sollten die Workshops wieder ganz normal alle zwei Wochen stattfinden.',
+    #     ]
+    # }
+]
+
+
 WORKSHOP_HTML_BLOCK_PRE = '''
 <!--[if mso]>
 <style>#list-r1c0m1 ul {
@@ -94,37 +126,6 @@ WORKSHOP_HTML_BLOCK = '''
 
 SUBTEXT_HTML = '<li style="margin-bottom: 1px; text-align: left;"><sub>{}</sub></li>'
 TICKET_LINK_HTML = '<a href="{}" style="text-decoration: underline; color: #eb6b09;">{}</a>'
-
-WORKSHOP_DATA = [
-    {
-        'title': 'Coding im Dojo am 16.03.2024',
-        'subtexts': [
-            'Eigene Projekte erfinden und spielerisch Programmieren. Wie immer ;)',
-        ],
-        'tickets': {
-            'text': 'Tickets wie immer unter {}',
-            'link': 'https://pretix.eu/dojosw/'
-        }
-    },
-    {
-        'title': 'Processing Workshop am 23.03.2024',
-        'subtexts': [
-            'Wir schauen uns das Tool "Processing" an. Dabei programmieren wir mit Text und lernen die Sprache Java kennen.'
-        ],
-        'tickets': {
-            'text': 'Tickets auch hier unter {}',
-            'link': 'https://pretix.eu/dojosw/'
-        }
-    },
-    {
-        'title': 'Sonstiges',
-        'subtexts': [
-            'Es gibt zwei neue Zusatzprodukte.',
-            'Ihr könnt in Pretix auswählen, dass ihr etwas zu Essen für das Buffet mitbringen wollt oder einen Computer reservieren. Den Computer bitte nur reservieren, wenn man keinen eigenen mitbringen kann ;)'
-        ]
-    }
-]
-
 WEEKDAYS = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag']
 
 
